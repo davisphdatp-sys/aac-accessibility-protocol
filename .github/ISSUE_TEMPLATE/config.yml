@@ -1,6 +1,5 @@
-# After the remote repository is created, replace OWNER with the actual GitHub organization or username
 blank_issues_enabled: false
 contact_links:
   - name: Questions and general discussion
-    url: https://github.com/OWNER/aac-accessibility-protocol/discussions
+    url: https://github.com/davisphdatp-sys/aac-accessibility-protocol/discussions
     about: Questions and general discussion
