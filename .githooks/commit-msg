@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# commit-msg hook: rejects AI attribution trailers.
+# This repository's CONTRIBUTING.md asks for a plain commit message with no
+# "Co-Authored-By" trailer and no "Generated with" line for AI tools.
+#
+# Enable per clone with:  git config core.hooksPath .githooks
+#
+# Comment lines (starting with #) are ignored, as git strips them from the final message.
+
+MSG_FILE="$1"
+if grep -v '^#' "$MSG_FILE" | grep -qiE 'co-authored-by|generated with'; then
+  echo "commit-msg: REJECTED. The message contains an AI attribution line" >&2
+  echo "  (\"Co-Authored-By\" or \"Generated with\")." >&2
+  echo "  This repository does not accept AI co-author trailers. Remove the line and commit again." >&2
+  exit 1
+fi
+exit 0
