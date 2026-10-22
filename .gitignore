@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+._*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Evidence files (screenshots and recordings from test runs) must not be committed.
+# Keep them in a local evidence/ directory; share them through the test-result issue instead.
+evidence/
+*.mov
+*.mp4
+*.m4a

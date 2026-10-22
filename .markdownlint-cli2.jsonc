@@ -1,0 +1,15 @@
+{
+  // Configuration for markdownlint
+  "config": {
+    "default": true,
+    // MD013: Line length disabled - prioritize readability over strict line limits
+    "MD013": false,
+    // MD033: Inline HTML disabled - allow HTML for complex formatting if needed
+    "MD033": false
+  },
+  // Paths to exclude from linting
+  "ignores": [
+    "node_modules",
+    "LICENSE"
+  ]
+}
