@@ -1,0 +1,44 @@
+name: Docs check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: |
+            **/*.md
+            #node_modules
+
+  link-check:
+    name: Link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --accept 200,206,403,429 --exclude-path node_modules --exclude 'https://github.com/OWNER/' './**/*.md'
+          fail: true
+
+  no-long-dashes:
+    name: No long dashes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for em or en dashes
+        run: |
+          if grep -rnP '[\x{2013}\x{2014}]' --include='*.md' --include='*.yml' --include='*.yaml' --include='*.json' --include='*.jsonc' --include='*.txt' --exclude-dir=.git .; then
+            echo 'Em or en dash found. Replace with a comma, colon, or hyphen.'
+            exit 1
+          fi
