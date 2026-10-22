@@ -104,7 +104,7 @@ WCAG 2.2 is written for web content. For a native app, apply each criterion as d
 
 ### Table 2: Success Criteria, Level AA
 
-The six success criteria added in WCAG 2.2 are 2.4.11, 2.5.7, 2.5.8, and 3.3.8 at Level AA (below), and 3.2.6 Consistent Help and 3.3.7 Redundant Entry, which are Level A and appear in Table 1.
+The six Level A and AA success criteria added in WCAG 2.2 are 2.4.11, 2.5.7, 2.5.8, and 3.3.8 at Level AA (below), and 3.2.6 Consistent Help and 3.3.7 Redundant Entry, which are Level A and appear in Table 1.
 
 | Criteria | Conformance Level | Remarks and Explanations |
 | --- | --- | --- |
