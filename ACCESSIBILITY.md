@@ -14,7 +14,7 @@ Our continuous integration workflow automatically checks Markdown formatting wit
 
 ## Report an Accessibility Problem
 
-If you encounter an accessibility issue with this repository or its documentation, please open a bug issue and add the label "accessibility." Include:
+If you encounter an accessibility issue with this repository or its documentation, please open a bug issue and choose the area "Accessibility of this repository". Include:
 
 - What you were trying to do
 - What happened instead

@@ -10,7 +10,7 @@ Before submitting code or documentation, please open a protocol-change issue fir
 
 Describe the user need: which AAC users and access method does your change serve? For example, "this clarifies testing for users who rely on eye-gaze access."
 
-Explain the standard it maps to: reference the applicable WCAG 2.2 success criterion (such as WCAG 2.2 section 2.1.1 Keyboard) or platform guideline (such as iOS Accessibility Guidelines for Motor).
+Explain the standard it maps to: reference the applicable WCAG 2.2 success criterion (such as WCAG 2.2 section 2.1.1 Keyboard) or platform guideline (such as Apple Human Interface Guidelines, Accessibility).
 
 Propose the test text or wording change. For new tests, use this seven-field layout:
 
@@ -56,7 +56,7 @@ Results are observations about how an app performed under the test protocol. Sub
 Keep contributions clear and accessible:
 
 - Use plain language and short sentences.
-- Do not use em dashes (-) or en dashes (-). Use commas, colons, periods, or parentheses instead.
+- Do not use em dashes or en dashes (the long dash characters). Use commas, colons, periods, or parentheses instead.
 - Use straight quotes ("like this"), not curly quotes.
 - Each Markdown file has exactly one H1 heading at the top.
 - Headings are in order without skipped levels (H1, then H2, then H3, etc.).
