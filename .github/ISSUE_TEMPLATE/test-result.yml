@@ -1,0 +1,134 @@
+name: Test result
+description: Submit hardware test results for an AAC app against this protocol
+title: "[Result] <app> <version> on <device>"
+labels: ["test-result"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Submit Test Results
+
+        Results must come from physical devices. Simulator results are not accepted because simulators cannot reproduce assistive technology behavior. Results are observations about one test run and are not ratings or endorsements.
+
+        **Important:** Do not include personal information, children's faces, or user names in evidence files. Evidence should show only app UI and test results.
+
+  - type: input
+    id: app_name
+    attributes:
+      label: App name
+      description: Name of the AAC app tested
+      placeholder: "e.g., Example AAC App"
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: Version number of the app tested
+      placeholder: "e.g., 2.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: Model and generation of the device used
+      placeholder: "e.g., iPad (10th generation)"
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: iPadOS or iOS version
+      description: Operating system version
+      placeholder: "e.g., 26.0.1"
+    validations:
+      required: true
+
+  - type: input
+    id: protocol_version
+    attributes:
+      label: Protocol version
+      description: Version of this protocol used for testing
+      value: "0.1.0"
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tester_role
+    attributes:
+      label: Your role
+      description: Who performed this test
+      options:
+        - Developer or vendor
+        - Independent evaluator
+        - Clinician or SLP
+        - District or procurement staff
+        - Family member or self-advocate
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: categories_run
+    attributes:
+      label: Test categories run
+      description: Which test categories you completed
+      options:
+        - label: "VO: VoiceOver"
+        - label: "SC: Switch Control and in-app scanning"
+        - label: "EG: Eye gaze and dwell"
+        - label: "TT: Touch targets"
+        - label: "DT: Dynamic Type"
+        - label: "RM: Reduce Motion"
+        - label: "HC: High contrast and color independence"
+        - label: "EM: Emergency and safety vocabulary"
+        - label: "SP: Speech output"
+        - label: "OF: Offline operation"
+        - label: "PR: Privacy"
+        - label: "CC: Clinician and caregiver controls"
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Pass/fail per test
+      description: "One line per test in this format: TEST-ID | Pass/Fail/Not Applicable/Blocked | Severity | Notes"
+      value: |
+        | Test ID | Result | Severity | Notes |
+        |---------|--------|----------|-------|
+        | VO-01 | Pass | | |
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: List evidence files or links (screenshots, recordings with audio). Include device, OS, date. Do not include faces or personal data.
+      placeholder: "e.g., screenshot-vo-01.png (device: iPad 10th gen, iPadOS 26.0, tested 2026-10-21)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Any context that helps understand the results
+      placeholder: "e.g., app was in landscape mode, user was using external keyboard"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm
+      options:
+        - label: These results come from a physical device, not a simulator
+          required: true
+        - label: I removed personal information from all evidence
+          required: true
+        - label: I understand results are observations and not endorsements
+          required: true

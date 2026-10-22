@@ -1,0 +1,86 @@
+name: Protocol change
+description: Propose a change to the test protocol
+title: "[Protocol] "
+labels: ["protocol-change"]
+body:
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of change
+      options:
+        - New test
+        - Change an existing test
+        - Remove or deprecate a test
+        - Clarify wording
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: test_ids
+    attributes:
+      label: Affected test IDs
+      description: If changing existing tests, list their IDs (e.g., VO-01, SC-02)
+      placeholder: "e.g., VO-01, VO-02"
+
+  - type: textarea
+    id: user_need
+    attributes:
+      label: User need
+      description: Which AAC users and access method does this change serve?
+      placeholder: "e.g., Users who rely on eye-gaze access need clearer guidance on dwell-time calibration..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: "For new tests, use this seven-field layout: Setup, Steps, Expected result, Pass criterion, Fail criterion, Evidence to record, Maps to. For wording changes, show the new text."
+      value: |
+        ### Setup
+
+
+        ### Steps
+
+
+        ### Expected result
+
+
+        ### Pass criterion
+
+
+        ### Fail criterion
+
+
+        ### Evidence to record
+
+
+        ### Maps to
+
+    validations:
+      required: true
+
+  - type: input
+    id: standard
+    attributes:
+      label: Standards reference
+      description: WCAG 2.2 success criterion or platform guideline
+      placeholder: "e.g., WCAG 2.2 section 2.1.1 Keyboard"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Observed failures, research, or standards documents that support this change
+      placeholder: "e.g., Users reported difficulty with [scenario]. This maps to WCAG 2.2 section [X]..."
+
+  - type: checkboxes
+    id: vendor_neutral
+    attributes:
+      label: Vendor neutrality
+      options:
+        - label: This proposal does not name, rate, or compare any product or vendor
+          required: true
