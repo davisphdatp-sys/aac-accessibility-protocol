@@ -375,9 +375,9 @@ Many AAC users have significant motor disabilities and communicate with one or t
   2. Set the scan rate to the minimum. Scan one full cycle of the grid and time three items with a stopwatch or from the recording.
   3. Set the scan rate to the maximum and repeat.
   4. Set a middle value and confirm the setting persists after the app is closed and reopened.
-- **Expected result:** The scan rate is adjustable across a documented range that includes at least 0.5 seconds to 5 seconds per item, the measured highlight duration matches the setting within about 10 percent, and the setting persists.
-- **Pass criterion:** The scan rate range includes at least 0.5 to 5 seconds per item, the measured timing at the minimum and maximum matches the settings within 10 percent, and the setting persists after relaunch.
-- **Fail criterion:** The range is narrower than 0.5 to 5 seconds, the measured timing differs from the setting by more than 10 percent, or the setting resets after relaunch.
+- **Expected result:** The scan rate is adjustable across a documented range that includes at least 0.5 seconds to 10 seconds per item (the long end of the range matters because fatigue and severe motor involvement can mean a user needs many seconds to activate a switch), the measured highlight duration matches the setting within about 10 percent, and the setting persists.
+- **Pass criterion:** The scan rate range includes at least 0.5 to 10 seconds per item, the measured timing at the minimum and maximum matches the settings within 10 percent, and the setting persists after relaunch.
+- **Fail criterion:** The range is narrower than 0.5 to 10 seconds, the measured timing differs from the setting by more than 10 percent, or the setting resets after relaunch.
 - **Evidence to record:** Screenshot of scan settings at minimum and maximum; screen recording at each setting; measured timings.
 - **Maps to:** WCAG 2.2 2.2.1 Timing Adjustable (Level A); Revised Section 508 503.2 User Preferences.
 
